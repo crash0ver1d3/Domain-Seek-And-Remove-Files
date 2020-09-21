@@ -3,10 +3,13 @@
 #    Date: 2020.09.18
 # Version: 3.5
 #  Author: Blake Regan @blake_r38
-# Purpose: Identify accounts in local groups on domain joined windows workstations
+# Purpose: Identify and delete specific files at scale across domain
 #   Legal: Script provided "AS IS" without warranties or guarantees of any
 #          kind.  USE AT YOUR OWN RISK.  Public domain, no rights reserved.
-
+#NOTE: This script requires Windows RM to be enabled and run with an account with elevated privileges on target.
+#By default, this will work with a account that is a memeber of the local administrators group on the targets
+#If you do not want to use domain admin to perform this, you can establish a lower privilege domain account as a member of local adminisrators using 
+#Restricted groups and applying via Group Policy
 
 
 $remove_psexec= {
